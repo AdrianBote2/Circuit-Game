@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circuit Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="briefcase-wrapper">
+
+      <!-- TOP LID — empty, same as bottom -->
+      <div class="briefcase-lid">
+        <div class="lid-interior"></div>
+      </div>
+
+      <!-- HINGE ROW — screws between lid and bottom -->
+      <div class="hinge-row">
+        <div class="hinge">
+          <div class="screw">--</div>
+        </div>
+        <div class="hinge-bar"></div>
+        <div class="hinge">
+          <div class="screw">--</div>
+        </div>
+      </div>
+
+      <!-- BOTTOM SHELL — main content lives here -->
+      <div class="briefcase-bottom">
+
+        <!-- Foam interior -->
+        <div class="briefcase-interior">
+
+          <!-- HOME SCREEN -->
+          <div class="screen" id="home-screen">
+            <div class="pixel-card">
+              <h1>CIRCUIT GAME</h1>
+              <div class="pixel-divider"></div>
+              <p>Solve the Circuit or BOOM!</p>
+              <div class="btn-group">
+                <button class="pixel-btn" onclick="startGame()">PLAY</button>
+                <button class="pixel-btn">HOW TO PLAY</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- GAME SCREEN -->
+          <div class="screen" id="play-screen">
+            <canvas id="game-canvas"></canvas>
+          </div>
+
+        </div>
+            <div class="latch-row">
+                <div class="latch">[ - ]</div>
+                <div class="latch-bar"></div>
+                <div class="latch">[ - ]</div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    
+
+
+
+
+
+
+    <script>
+      function startGame() {
+        document.getElementById('home-screen').style.display = 'none';
+        document.getElementById('play-screen').style.display  = 'flex';
+      }
+    </script>
+
+  </body>
+</html>
