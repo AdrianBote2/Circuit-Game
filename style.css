@@ -339,3 +339,12 @@ p {
         0 0 0 3px var(--black),
         0px 0px 0px var(--black);
 }
+
+#game-canvas {
+    /* Ensures the canvas doesn't stretch and stays crisp */
+    image-rendering: pixelated; 
+    border: 4px solid #000; /* Optional: adds to that 'pixel-card' look */
+    box-shadow: 0 10px 0 rgba(0,0,0,0.2); 
+    max-width: 100%; /* Prevents it from breaking on small screens */
+    max-height: 100%;
+}
