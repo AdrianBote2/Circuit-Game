@@ -1,6 +1,3 @@
-/* =====================
-   RESET & BASE
-===================== */
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +7,12 @@
 }
 
 :root {
-    /* aluminium briefcase */
     --silver:       #C8C8C8;
     --silver-light: #E0E0E0;
     --silver-dark:  #888888;
     --silver-edge:  #666666;
     --foam:         #34345e;
     --foam-inner:   #0D0D1A;
-
-    /* 8-bit accents */
     --gold:         #FFD700;
     --red:          #FF3B3B;
     --yellow:       #FFD700;
@@ -27,9 +21,6 @@
     --black:        #0A0A0A;
 }
 
-/* =====================
-   BODY
-===================== */
 body {
     background-color: #ffc9af;
     background-size: 20px 20px;
@@ -46,17 +37,13 @@ body {
     flex-direction: column;
     align-items: center;
     width: 620px;
-    position: relative;   /* lid positions itself above this */
+    position: relative;   
 }
 
-/* =====================
-   TOP LID
-   Same as bottom shell but empty
-===================== */
 .briefcase-lid {
     width: 100%;
     position: absolute;
-    bottom: 100%;          /* sits directly above the bottom shell */
+    bottom: 100%;         
     left: 0;
     background: linear-gradient(
         180deg,
@@ -221,6 +208,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 /* =====================
@@ -229,6 +218,7 @@ body {
 .screen {
     width: 100%;
     height: 100%;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,11 +332,38 @@ p {
         0px 0px 0px var(--black);
 }
 
-#game-canvas {
-    /* Ensures the canvas doesn't stretch and stays crisp */
-    image-rendering: pixelated; 
-    border: 4px solid #ffffff; /* Optional: adds to that 'pixel-card' look */
-    box-shadow: 0 10px 0 rgba(0,0,0,0.2); 
-    max-width: 100%; /* Prevents it from breaking on small screens */
-    max-height: 100%;
+.timerDesign{
+    background-color: #563232;
+    border: solid 2px var(--silver-edge);
+    padding: 6px;
+}
+
+.timerText{
+    color:#FF3B3B;
+}
+
+.slotDesign{
+    border: solid 2px var(--gold);
+    background-color: var(--silver-edge);
+    margin-bottom: 20px;
+}
+
+.draggables{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+
+}
+
+.slotDesign:hover{
+    transform: translate(-4px, -4px);
+    cursor: pointer;
+}
+
+.circuitBoard{
+    background-color: var(--silver-dark);
+    width: 520px;
+    height: 270px;
 }

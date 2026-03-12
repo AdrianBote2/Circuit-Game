@@ -5,78 +5,93 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="js/Index.js" defer></script>
-    <script src="js/phaser.js"></script>
   </head>
   <body>
-
-    <div class="briefcase-wrapper">
-
-      <!-- TOP LID — empty, same as bottom -->
-      <div class="briefcase-lid">
-        <div class="lid-interior"></div>
-      </div>
-
-      <!-- HINGE ROW — screws between lid and bottom -->
-      <div class="hinge-row">
-        <div class="hinge">
-          <div class="screw">--</div>
-        </div>
-        <div class="hinge-bar"></div>
-        <div class="hinge">
-          <div class="screw">--</div>
+      <div class="draggables">
+        <p class="Tray">COMPONENTS</p>
+        <div class="slots">
+          <p class="slotDesign" draggable="true">Slot 1</p>
+          <p class="slotDesign" draggable="true">Slot 2</p>
+          <p class="slotDesign" draggable="true">Slot 3</p>
+          <p class="slotDesign" draggable="true">Slot 4</p>
         </div>
       </div>
+      <div class="briefcase-wrapper">
 
-      <!-- BOTTOM SHELL — main content lives here -->
-      <div class="briefcase-bottom">
+        <!-- TOP LID — empty, same as bottom -->
+        <div class="briefcase-lid">
+          <div class="lid-interior"></div>
+        </div>
 
-        <!-- Foam interior -->
-        <div class="briefcase-interior">
+        <!-- HINGE ROW — screws between lid and bottom -->
+        <div class="hinge-row">
+          <div class="hinge">
+            <div class="screw">--</div>
+          </div>
+          <div class="hinge-bar"></div>
+          <div class="hinge">
+            <div class="screw">--</div>
+          </div>
+        </div>
 
-          <!-- HOME SCREEN -->
-          <div class="screen" id="home-screen">
-            <div class="pixel-card">
-              <h1>CIRCUIT GAME</h1>
-              <div class="pixel-divider"></div>
-              <p>Solve the Circuit or BOOM!</p>
-              <div class="btn-group">
-                <button class="pixel-btn" onclick="startGame()">PLAY</button>
-                <button class="pixel-btn" onclick="howToPlay()">HOW TO PLAY</button>
+        <!-- BOTTOM SHELL — main content lives here -->
+        <div class="briefcase-bottom">
+
+          <!-- Foam interior -->
+          <div class="briefcase-interior">
+
+            <!-- HOME SCREEN -->
+            <div class="screen" id="home-screen">
+              <div class="pixel-card">
+                <h1>CIRCUIT GAME</h1>
+                <div class="pixel-divider"></div>
+                <p>Solve the Circuit or BOOM!</p>
+                <div class="btn-group">
+                  <button class="pixel-btn" onclick="startGame()">PLAY</button>
+                  <button class="pixel-btn" onclick="howToPlay()">HOW TO PLAY</button>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- show how to play screen here -->
-          <!-- HOW TO PLAY-->
-          <div class="screen" id="howToPlay">
-            <div class = "pixel-card">
-                <h1>HOW TO PLAY</h1>
-                <p>You only have 30 seconds to deactivate the bomb!</p>
-                <p>You will know if the current flow is correct if the light is green!</p>
-                <p>If the 30 seconds are up then the bomb will explode!</p>
-                <p>Tools given:
-                  Resistor 
-                  Wire
-                </p>
-                <button class="pixel-btn" onclick="homeScreen()">BACK</button>
+            <!-- show how to play screen here -->
+            <!-- HOW TO PLAY-->
+            <div class="screen" id="howToPlay">
+              <div class = "pixel-card">
+                  <h1>HOW TO PLAY</h1>
+                  <p>You only have 30 seconds to deactivate the bomb!</p>
+                  <p>You will know if the current flow is correct if the light is green!</p>
+                  <p>If the 30 seconds are up then the bomb will explode!</p>
+                  <p>Tools given:
+                    Resistor 
+                    Wire
+                  </p>
+                  <button class="pixel-btn" onclick="homeScreen()">BACK</button>
+              </div>
             </div>
-          </div>
 
-          <!-- Show phaser game here -->
-          <!-- GAME SCREEN -->
-          <div class="screen" id="play-screen">
-      
-          </div>
+            <!-- Show phaser game here -->
+            <!-- GAME SCREEN -->
+            <div class="screen" id="play-screen">
+              <div id = formattingGame>
+                <div class = "circuitBoard">
+                    <p>Circuit board here</p>
+                </div>
+                <div class="timerDesign">
+                    <p class="timerText"><span id="timer">30</span>:00</p>
+                </div>
+              </div>
+            </div>
 
+          </div>
+              <div class="latch-row">
+                  <div class="latch">[ - ]</div>
+                  <div class="latch-bar"></div>
+                  <div class="latch">[ - ]</div>
+              </div>
+          </div>
         </div>
-            <div class="latch-row">
-                <div class="latch">[ - ]</div>
-                <div class="latch-bar"></div>
-                <div class="latch">[ - ]</div>
-            </div>
+        <div>
+          <p>AI Guide</p>
         </div>
       </div>
-
-    </div>
-
   </body>
 </html>
