@@ -14,12 +14,14 @@ function howToPlay() {
     document.getElementById('home-screen').style.display = 'none';
     document.getElementById('howToPlay').style.display = 'flex';
 }
-//Drag and 
-function dragStartHandler(event){
-    event.dataTransfer.setData("text/plain", event.target.id);
-    event.target.style.opacity = '0.4';
-}
 
+
+
+/* function dragItem(){
+    
+} */
+/* function dropItem(){
+} */
 
 
 //Timer function
